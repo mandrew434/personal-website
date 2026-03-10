@@ -8,16 +8,7 @@ import {
 export default function About() {
   return (
     <div className="wrapper bg-light min-vh-100">
-      <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
-        <div className="container">
-          <Link href="/" className="navbar-brand text-dark fs-3">
-            ANDREW <span className="text-primary-custom">MALONE</span>
-          </Link>
-          <Link href="/" className="btn btn-outline-dark d-flex align-items-center gap-2">
-            <ArrowLeft size={16} /> BACK HOME
-          </Link>
-        </div>
-      </nav>
+      
 
       <section className="py-5 my-5">
         <div className="container">
