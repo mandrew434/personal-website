@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "latest",
+    "@types/bootstrap": "^5.2.10",
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
@@ -28,6 +29,6 @@
     "eslint-config-next": "latest",
     "postcss": "latest",
     "tailwindcss": "latest",
-    "typescript": "latest"
+    "typescript": "5.9.3"
   }
 }
