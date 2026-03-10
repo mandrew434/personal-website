@@ -25,7 +25,7 @@ export default function About() {
             <div className="col-lg-4">
               <div className="card p-3 shadow-lg border-0">
                 <div className="relative aspect-[4/5] rounded-2 overflow-hidden mb-4">
-                  <Image src="/headshot.jpg" alt="Andrew Malone" fill className="object-cover" />
+                  <Image src="/marriott-hall.jpg" alt="Andrew Malone at BYU Marriott" fill className="object-cover" />
                 </div>
                 <div className="px-2">
                   <h1 className="h3 fw-black mb-1">ANDREW MALONE</h1>

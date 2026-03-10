@@ -2,19 +2,19 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white border-b border-zinc-100 h-20 flex items-center">
-      <div className="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
-        <Link href="/" className="text-2xl font-black text-zinc-900 tracking-tighter">
-          ANDREW <span className="text-[#00A9D9]">MALONE</span>
+    <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+      <div className="container">
+        <Link href="/" className="navbar-brand text-dark fs-3">
+          ANDREW <span className="text-primary-custom">MALONE</span>
         </Link>
-        <div className="hidden md:flex gap-10 items-center">
-          <Link href="/" className="nav-link text-zinc-900">Home</Link>
-          <Link href="/about" className="nav-link text-zinc-400">About</Link>
-          <Link href="/projects" className="nav-link text-zinc-400">Projects</Link>
-          <button className="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-400">
-             <span className="sr-only">Menu</span>
-             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10H17M3 5H17M3 15H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
-          </button>
+        <div className="collapse navbar-collapse justify-content-end">
+          <ul className="navbar-nav gap-4">
+            <li className="nav-item"><Link href="/" className="nav-link fw-bold">HOME</Link></li>
+            <li className="nav-item"><Link href="/about" className="nav-link fw-bold">ABOUT</Link></li>
+            <li className="nav-item"><Link href="/projects" className="nav-link fw-bold">PROJECTS</Link></li>
+            <li className="nav-item"><Link href="/identity" className="nav-link fw-bold">IDENTITY</Link></li>
+            <li className="nav-item"><Link href="mailto:mandrew434@gmail.com" className="btn btn-primary-custom ms-lg-3">HIRE ME</Link></li>
+          </ul>
         </div>
       </div>
     </nav>
