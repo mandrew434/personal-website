@@ -1,93 +1,100 @@
 import Link from 'next/link';
-import { ArrowRight, ChevronRight, Cpu, BarChart3, Globe } from 'lucide-react';
+import { ArrowRight, MoveRight, Layers, BarChart, Zap } from 'lucide-react';
 
 export default function Home() {
   return (
-    <main className="pt-20">
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden border-b border-zinc-100">
-        <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-          <div>
-            <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-zinc-50 border border-zinc-100 mb-10">
-              <span className="w-2 h-2 rounded-full bg-zinc-900 animate-pulse" />
-              <span className="text-[10px] font-bold tracking-widest uppercase text-zinc-600">Available for AI Consulting</span>
+    <main>
+      {/* Hero */}
+      <section className="section-padding bg-white overflow-hidden">
+        <div className="max-w-screen-xl mx-auto px-6">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 mb-8">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-600">Based in Provo, UT</span>
             </div>
-            <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-zinc-900 mb-8 leading-[0.9]">
-              STRATEGY<br />DRIVEN BY<br />INTELLIGENCE<span className="text-zinc-300">.</span>
+            <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tightest leading-[1] text-zinc-900 mb-10 text-balance">
+              Bridging the gap between <span className="text-zinc-400">complex data</span> and <span className="italic">business strategy.</span>
             </h1>
-            <p className="text-xl text-zinc-500 mb-12 max-w-lg leading-relaxed font-medium">
-              Information Systems at BYU. Specializing in high-impact AI strategy and operational automation for forward-thinking enterprises.
+            <p className="text-xl md:text-2xl text-zinc-500 mb-12 max-w-2xl leading-relaxed">
+              Information Systems at BYU. Specializing in AI Strategy and high-impact operational automation for the modern enterprise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6">
-              <Link href="/projects" className="group px-8 py-5 bg-zinc-900 text-white font-bold tracking-widest uppercase text-xs flex items-center gap-3 justify-center hover:bg-zinc-800 transition-all">
-                View Portfolio <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-wrap gap-4">
+              <Link href="/projects" className="px-8 py-4 bg-zinc-900 text-white font-semibold rounded-lg hover:bg-zinc-800 transition-all flex items-center gap-2">
+                View Engagement History <MoveRight size={20} />
               </Link>
-              <Link href="/about" className="px-8 py-5 border border-zinc-200 text-zinc-900 font-bold tracking-widest uppercase text-xs text-center hover:bg-zinc-50 transition-colors">
-                The Founder
-              </Link>
-            </div>
-          </div>
-          <div className="hidden md:block relative">
-            <div className="aspect-[4/5] bg-zinc-50 border border-zinc-100 relative overflow-hidden group">
-               <div className="absolute inset-0 bg-gradient-to-br from-zinc-200/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-               <div className="absolute inset-0 flex items-center justify-center p-20">
-                  <span className="text-zinc-100 font-black text-[20rem] tracking-tighter select-none">AM</span>
-               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Philosophy / Value Prop */}
-      <section className="py-32 bg-zinc-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-20">
+      {/* Metrics Section */}
+      <section className="py-20 border-y border-zinc-100 bg-zinc-50/50">
+        <div className="max-w-screen-xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div>
-              <span className="text-[10px] font-black tracking-[0.3em] uppercase text-zinc-400 mb-6 block">01 / Innovation</span>
-              <h3 className="text-2xl font-bold mb-6 text-zinc-900">Applied Intelligence</h3>
-              <p className="text-zinc-500 leading-relaxed">We don't just build chatbots. We architect agentic workflows that integrate directly into your CRM, identifying millions in lost revenue.</p>
+              <p className="text-4xl font-bold text-zinc-900 mb-2">$3.67M+</p>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Recovery Identified</p>
             </div>
             <div>
-              <span className="text-[10px] font-black tracking-[0.3em] uppercase text-zinc-400 mb-6 block">02 / Precision</span>
-              <h3 className="text-2xl font-bold mb-6 text-zinc-900">Data Engineering</h3>
-              <p className="text-zinc-500 leading-relaxed">Leveraging Snowflake, Python, and SQL to turn unstructured raw data into clean, actionable business strategy.</p>
+              <p className="text-4xl font-bold text-zinc-900 mb-2">50%</p>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Workflow Optimization</p>
             </div>
             <div>
-              <span className="text-[10px] font-black tracking-[0.3em] uppercase text-zinc-400 mb-6 block">03 / Impact</span>
-              <h3 className="text-2xl font-bold mb-6 text-zinc-900">Strategic Consulting</h3>
-              <p className="text-zinc-500 leading-relaxed">Bridging the gap between technical execution and business leadership. Designed for the executive suite.</p>
+              <p className="text-4xl font-bold text-zinc-900 mb-2">50+</p>
+              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Enterprise Deployments</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Work Callout */}
-      <section className="py-40">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-10">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-zinc-900 leading-[0.9]">
-              SELECT<br />ENGAGEMENTS
+      {/* Philosophy */}
+      <section className="section-padding border-b border-zinc-100">
+        <div className="max-w-screen-xl mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-24 items-start">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-tight">
+              A commitment to <br />applied intelligence.
             </h2>
-            <Link href="/projects" className="pb-4 border-b-2 border-zinc-900 text-sm font-bold tracking-widest uppercase text-zinc-900">
-              Browse All Projects
-            </Link>
-          </div>
-          <div className="grid md:grid-cols-2 gap-10">
-             <Link href="/projects" className="group">
-                <div className="aspect-video bg-zinc-900 mb-8 overflow-hidden">
-                   <div className="w-full h-full flex items-center justify-center text-zinc-800 text-9xl font-black italic group-hover:scale-105 transition-transform">01</div>
+            <div className="space-y-12">
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
+                  <Layers className="text-zinc-900" size={24} />
                 </div>
-                <h4 className="text-2xl font-bold mb-2 group-hover:underline">Pattern Reverse Logistics</h4>
-                <p className="text-zinc-500 font-medium">$3.67M Reimbursement Recovery Pipeline</p>
-             </Link>
-             <Link href="/projects" className="group">
-                <div className="aspect-video bg-zinc-100 mb-8 overflow-hidden">
-                   <div className="w-full h-full flex items-center justify-center text-zinc-200 text-9xl font-black italic group-hover:scale-105 transition-transform">02</div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 text-zinc-900">Architectural Thinking</h4>
+                  <p className="text-zinc-500 leading-relaxed">Designing end-to-end AI frameworks that integrate seamlessly into complex corporate ecosystems, not just standalone tools.</p>
                 </div>
-                <h4 className="text-2xl font-bold mb-2 group-hover:underline">Extra Mile E-commerce</h4>
-                <p className="text-zinc-500 font-medium">Enterprise AI Chatbot Framework Scaling</p>
-             </Link>
+              </div>
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
+                  <BarChart className="text-zinc-900" size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 text-zinc-900">Analytical Rigor</h4>
+                  <p className="text-zinc-500 leading-relaxed">Deep-dive technical audits across SQL, Snowflake, and Python to identify latent operational value.</p>
+                </div>
+              </div>
+              <div className="flex gap-6">
+                <div className="w-12 h-12 rounded-xl bg-zinc-100 flex items-center justify-center shrink-0">
+                  <Zap className="text-zinc-900" size={24} />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold mb-3 text-zinc-900">Rapid Execution</h4>
+                  <p className="text-zinc-500 leading-relaxed">Deploying optimized, production-ready solutions that deliver measurable ROI within weeks, not months.</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-padding bg-zinc-900 text-white text-center">
+        <div className="max-w-screen-xl mx-auto px-6">
+          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-balance leading-tight">
+            Ready to integrate intelligence <br className="hidden md:block" /> into your business strategy?
+          </h2>
+          <Link href="mailto:mandrew434@gmail.com" className="inline-flex items-center gap-2 text-lg font-semibold border-b-2 border-white pb-1 hover:opacity-70 transition-opacity">
+            Start a Conversation <ArrowRight size={20} />
+          </Link>
         </div>
       </section>
     </main>
