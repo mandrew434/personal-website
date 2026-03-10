@@ -31,14 +31,12 @@ export default function Identity() {
   ];
 
   return (
-    <div className="wrapper bg-light min-vh-100">
-      
-
-      <section className="py-5">
+    <div className="wrapper bg-dark-custom min-vh-100 pt-5">
+      <section className="py-5 mt-5">
         <div className="container py-5">
           <div className="text-center mb-5 pb-5">
-            <span className="badge bg-primary-custom mb-3 px-3 py-2 uppercase tracking-widest">Beyond the Code</span>
-            <h1 className="display-3 fw-black uppercase text-dark">IDENTITY & <span className="text-primary-custom">PASSIONS</span></h1>
+            <span className="badge badge-custom mb-3 px-3 py-2 uppercase tracking-widest">Beyond the Code</span>
+            <h1 className="display-3 fw-black uppercase text-white">IDENTITY & <span className="text-primary-custom">PASSIONS</span></h1>
             <p className="lead text-muted max-w-2xl mx-auto mt-3">The interests and adventures that drive my perspective as a strategist and problem solver.</p>
           </div>
 
@@ -48,17 +46,13 @@ export default function Identity() {
                 <div className="card border-0 shadow-lg h-100 rounded-4 overflow-hidden group">
                   <div className="relative h-64 overflow-hidden">
                     <Image src={h.img} alt={h.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark/60 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent" />
                   </div>
                   <div className="p-5">
                     <div className="d-flex align-items-center gap-2 text-primary-custom fw-bold small uppercase tracking-wider mb-2">
-                      {i === 0 && <Trophy size={16} />}
-                      {i === 1 && <Mountain size={16} />}
-                      {i === 2 && <Heart size={16} />}
-                      {i === 3 && <Flag size={16} />}
                       {h.role}
                     </div>
-                    <h3 className="h3 fw-black text-dark mb-3">{h.title}</h3>
+                    <h3 className="h3 fw-black text-white mb-3">{h.title}</h3>
                     <p className="text-muted leading-relaxed">{h.desc}</p>
                   </div>
                 </div>
@@ -68,7 +62,7 @@ export default function Identity() {
         </div>
       </section>
 
-      <footer className="py-5 bg-dark text-white text-center mt-5">
+      <footer className="py-5 border-top border-secondary bg-dark text-white text-center mt-5">
         <p className="text-muted small mb-0">&copy; 2026 Andrew Malone • Built to the LAYN Standard</p>
       </footer>
     </div>
