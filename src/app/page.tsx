@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { 
   ArrowRight, Download, Linkedin, Github, Mail, 
-  BarChart3, Cpu, Workflow, CheckCircle2 
+  BarChart3, Cpu, Workflow, CheckCircle2, Sparkles, BrainCircuit, Rocket
 } from 'lucide-react';
 
 export default function Home() {
@@ -34,16 +34,18 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="hero-section">
+      <section className="hero-section" style={{ background: 'linear-gradient(rgba(12, 12, 13, 0.85), rgba(12, 12, 13, 0.85)), url("/headshot.jpg")', backgroundSize: 'cover', backgroundPosition: 'center 20%' }}>
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-7">
-              <span className="badge bg-primary-custom mb-4 px-3 py-2">AI STRATEGY CONSULTANT</span>
-              <h1 className="display-2 fw-black mb-4">DRIVING IMPACT THROUGH <span className="text-primary-custom">APPLIED INTELLIGENCE.</span></h1>
+              <div className="d-inline-flex align-items-center gap-2 badge bg-primary-custom mb-4 px-3 py-2">
+                <Sparkles size={14} /> AI STRATEGY CONSULTANT
+              </div>
+              <h1 className="display-2 fw-black mb-4">ENGINEERING THE <span className="text-primary-custom italic">FUTURE</span> OF BUSINESS.</h1>
               <p className="lead mb-5 text-light opacity-75">Bridging the gap between high-level business goals and technical execution for forward-thinking enterprises.</p>
               <div className="d-flex gap-3">
                 <Link href="/projects" className="btn btn-primary-custom btn-lg">VIEW MY WORK</Link>
-                <Link href="mailto:mandrew434@gmail.com" className="btn btn-outline-light btn-lg">CONTACT ME</Link>
+                <Link href="mailto:mandrew434@gmail.com" className="btn btn-outline-light btn-lg">START A PROJECT</Link>
               </div>
             </div>
           </div>
@@ -68,8 +70,8 @@ export default function Home() {
             </div>
             <div className="col-md-3">
               <div className="stat-box">
-                <span className="stat-number">450+</span>
-                <span className="stat-label">AI Users Served</span>
+                <span className="stat-number">10+</span>
+                <span className="stat-label">AI Deployments</span>
               </div>
             </div>
             <div className="col-md-3">
@@ -82,85 +84,79 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Why AI Consulting? */}
       <section className="py-5 my-5">
-        <div className="container">
+        <div className="container py-5">
           <div className="row align-items-center g-5">
-            <div className="col-lg-5">
-              <div className="position-relative">
-                <div className="position-absolute bg-primary-custom w-100 h-100 rounded-3" style={{ top: '20px', left: '20px', zIndex: -1 }}></div>
-                <Image src="/headshot.jpg" alt="Andrew Malone" width={500} height={600} className="img-fluid rounded-3 shadow-lg" />
-              </div>
+            <div className="col-lg-6">
+              <h2 className="section-title">THE APPROACH</h2>
+              <h3 className="display-6 fw-bold mb-4">Transforming <span className="text-primary-custom">Data</span> into Decision-Making Power.</h3>
+              <p className="text-muted mb-4">I help organizations navigate the rapidly evolving AI landscape. My focus isn't on hype—it's on **Applied Intelligence**.</p>
+              <ul className="list-unstyled space-y-3">
+                <li className="d-flex gap-3 mb-3">
+                  <div className="text-primary-custom"><BrainCircuit size={24} /></div>
+                  <div>
+                    <h5 className="fw-bold mb-1">Strategic Integration</h5>
+                    <p className="small text-muted">Architecting AI that fits your specific business DNA and CRM ecosystem.</p>
+                  </div>
+                </li>
+                <li className="d-flex gap-3 mb-3">
+                  <div className="text-primary-custom"><Rocket size={24} /></div>
+                  <div>
+                    <h5 className="fw-bold mb-1">Rapid Deployment</h5>
+                    <p className="small text-muted">From architecture to live production in weeks, not quarters.</p>
+                  </div>
+                </li>
+              </ul>
             </div>
-            <div className="col-lg-7">
-              <h2 className="section-title">MY STORY</h2>
-              <p className="fs-4 text-dark mb-4 fw-semibold">I am an Information Systems professional at BYU, transforming complex data into operational advantages.</p>
-              <p className="text-muted mb-5">Currently pursuing my MISM, I have delivered multi-million dollar impacts at Pattern and architected enterprise AI solutions. My focus is on <span className="text-primary-custom fw-bold">Applied Intelligence</span>—delivering measurable ROI through deliberate technology deployment.</p>
-              
-              <div className="row g-4 mb-5">
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center gap-3">
-                    <div className="bg-light p-2 rounded-circle text-primary-custom"><CheckCircle2 size={24} /></div>
-                    <span className="fw-bold">AI Strategy & Deployment</span>
-                  </div>
+            <div className="col-lg-6">
+              <div className="p-5 bg-dark rounded-4 shadow-2xl text-white">
+                <h4 className="fw-bold mb-4 border-bottom border-secondary pb-3 text-primary-custom">Current Focus</h4>
+                <div className="mb-4">
+                  <p className="small fw-bold text-uppercase tracking-widest text-secondary mb-1">01 / Agentic RAG</p>
+                  <p className="mb-0">Building knowledge-bases that don't just answer questions, but execute tasks.</p>
                 </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center gap-3">
-                    <div className="bg-light p-2 rounded-circle text-primary-custom"><CheckCircle2 size={24} /></div>
-                    <span className="fw-bold">Data Engineering (SQL/Snowflake)</span>
-                  </div>
+                <div className="mb-4">
+                  <p className="small fw-bold text-uppercase tracking-widest text-secondary mb-1">02 / Revenue Ops</p>
+                  <p className="mb-0">Automating lead-to-close workflows with intelligent CRM integration.</p>
                 </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center gap-3">
-                    <div className="bg-light p-2 rounded-circle text-primary-custom"><CheckCircle2 size={24} /></div>
-                    <span className="fw-bold">Applied ML (Python/Sk-Learn)</span>
-                  </div>
+                <div>
+                  <p className="small fw-bold text-uppercase tracking-widest text-secondary mb-1">03 / Data Audits</p>
+                  <p className="mb-0">Identifying latent profit in Snowflake and SQL datasets.</p>
                 </div>
-                <div className="col-md-6">
-                  <div className="d-flex align-items-center gap-3">
-                    <div className="bg-light p-2 rounded-circle text-primary-custom"><CheckCircle2 size={24} /></div>
-                    <span className="fw-bold">Strategic Technology Consulting</span>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="d-flex gap-4">
-                <a href="https://linkedin.com/in/andrew-r-malone/" className="text-muted hover:text-primary-custom transition-colors"><Linkedin size={24} /></a>
-                <a href="https://github.com/mandrew434" className="text-muted hover:text-primary-custom transition-colors"><Github size={24} /></a>
-                <a href="mailto:mandrew434@gmail.com" className="text-muted hover:text-primary-custom transition-colors"><Mail size={24} /></a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services */}
+      {/* Services Section */}
       <section className="py-5 bg-light">
         <div className="container py-5">
           <div className="text-center mb-5">
-            <h2 className="display-5 fw-black">WHAT I <span className="text-primary-custom">DO</span></h2>
+            <h2 className="display-5 fw-black">CONSULTING <span className="text-primary-custom">SERVICES</span></h2>
             <div className="bg-primary-custom mx-auto mt-3" style={{ width: '60px', height: '3px' }}></div>
           </div>
           <div className="row g-4">
             <div className="col-md-4">
-              <div className="card h-100 p-5">
+              <div className="card h-100 p-5 border-0 shadow-sm">
                 <div className="bg-light d-inline-flex p-3 rounded-3 mb-4 text-primary-custom"><BarChart3 size={32} /></div>
                 <h3 className="h4 fw-bold mb-3">Data Strategy</h3>
-                <p className="text-muted">Turning raw infrastructure into multimillion-dollar recovery pipelines via SQL, Snowflake, and advanced analytics.</p>
+                <p className="text-muted">Mining millions in recovery opportunities through advanced SQL and Snowflake engineering.</p>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 p-5">
+              <div className="card h-100 p-5 border-0 shadow-sm">
                 <div className="bg-light d-inline-flex p-3 rounded-3 mb-4 text-primary-custom"><Workflow size={32} /></div>
                 <h3 className="h4 fw-bold mb-3">Agentic Workflows</h3>
-                <p className="text-muted">Architecting scalable AI frameworks and chatbot systems that integrate directly with enterprise CRM ecosystems.</p>
+                <p className="text-muted">Deploying scalable AI chatbot frameworks and agentic workflows that live inside your CRM.</p>
               </div>
             </div>
             <div className="col-md-4">
-              <div className="card h-100 p-5">
+              <div className="card h-100 p-5 border-0 shadow-sm">
                 <div className="bg-light d-inline-flex p-3 rounded-3 mb-4 text-primary-custom"><Cpu size={32} /></div>
                 <h3 className="h4 fw-bold mb-3">Applied AI/ML</h3>
-                <p className="text-muted">Engineering machine learning solutions for logistics, predictive maintenance, and operational forecasting.</p>
+                <p className="text-muted">Bridging the gap between academic ML research and production-grade business tools.</p>
               </div>
             </div>
           </div>
@@ -173,7 +169,7 @@ export default function Home() {
           <div className="row align-items-center">
             <div className="col-md-6">
               <span className="h4 fw-black">MALONE<span className="text-primary-custom">.</span></span>
-              <p className="mt-3 text-muted">Building the future of business through Applied Intelligence.</p>
+              <p className="mt-3 text-muted">The Jarvis-standard for business intelligence.</p>
             </div>
             <div className="col-md-6 text-md-end">
               <p className="text-muted small mb-0">&copy; 2026 Andrew Malone. All Rights Reserved.</p>
