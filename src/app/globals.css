@@ -4,13 +4,7 @@
 
 @layer base {
   :root {
-    --primary: 199 89% 48%; /* #00A9D9 - Bright Blue from example */
-    --primary-foreground: 0 0% 100%;
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --border: 214.3 31.8% 91.4%;
+    --primary: #00A9D9;
   }
 }
 
@@ -26,26 +20,61 @@ body {
 }
 
 .btn-primary {
-  @apply bg-[#00A9D9] text-white px-6 py-3 font-bold uppercase tracking-wider rounded-sm hover:bg-[#008db6] transition-colors;
+  background-color: #00A9D9;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 0.125rem;
+  transition: background-color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  background-color: #008db6;
 }
 
 .section-title {
-  @apply text-[#00A9D9] font-black uppercase tracking-widest text-xl mb-8 flex items-center gap-4;
+  color: #00A9D9;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .section-title::after {
   content: "";
-  @apply h-[2px] flex-1 bg-zinc-100;
+  height: 2px;
+  flex: 1;
+  background-color: #f4f4f5;
 }
 
 .info-label {
-  @apply font-bold text-zinc-900 w-32 inline-block;
+  font-weight: bold;
+  color: #18181b;
+  width: 8rem;
+  display: inline-block;
 }
 
 .info-value {
-  @apply text-zinc-500;
+  color: #71717a;
 }
 
 .nav-link {
-  @apply font-bold uppercase tracking-widest text-xs hover:text-[#00A9D9] transition-colors;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.75rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #00A9D9;
 }
