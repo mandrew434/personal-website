@@ -1,68 +1,100 @@
+import Link from 'next/link';
 import Image from 'next/image';
-import { Award, BookOpen, MapPin, Trophy } from 'lucide-react';
+import { 
+  ArrowLeft, CheckCircle2, Award, BookOpen, 
+  MapPin, Globe, Trophy 
+} from 'lucide-react';
 
 export default function About() {
   return (
-    <main className="pt-40 pb-24 max-w-7xl mx-auto px-6">
-      <div className="grid md:grid-cols-12 gap-20">
-        <div className="md:col-span-5">
-          <div className="relative aspect-[4/5] bg-zinc-100 rounded-3xl overflow-hidden border border-zinc-200 shadow-xl mb-10">
-            <Image src="/headshot.jpg" alt="Andrew Malone" fill className="object-cover" />
-          </div>
-          <div className="space-y-6">
-             <div className="flex gap-4 items-center text-zinc-500">
-                <MapPin size={20} />
-                <span className="font-bold tracking-widest uppercase text-[10px]">Provo, Utah / Remote</span>
-             </div>
-             <div className="flex gap-4 items-center text-zinc-500">
-                <BookOpen size={20} />
-                <span className="font-bold tracking-widest uppercase text-[10px]">BYU Marriott School of Business</span>
-             </div>
-          </div>
+    <div className="wrapper bg-light min-vh-100">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div className="container">
+          <Link href="/" className="navbar-brand text-dark fs-3">
+            ANDREW <span className="text-primary-custom">MALONE</span>
+          </Link>
+          <Link href="/" className="btn btn-outline-dark d-flex align-items-center gap-2">
+            <ArrowLeft size={16} /> BACK HOME
+          </Link>
         </div>
-        <div className="md:col-span-7">
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-zinc-900 mb-12 uppercase leading-[0.9]">THE<br />FOUNDER</h1>
-          <div className="prose prose-zinc prose-xl max-w-none text-zinc-500 font-medium leading-relaxed">
-            <p className="mb-8 text-zinc-900">
-              Andrew Malone is an Information Systems professional and AI strategist specializing in the intersection of emerging technology and business operations.
-            </p>
-            <p className="mb-8">
-              Currently pursuing a Master of Information Systems Management (MISM) at BYU, Andrew has already delivered significant financial impact through data-driven automation. At Pattern, he identified over $3.6M in reimbursement recovery opportunities by engineering custom SQL and Python analytics pipelines.
-            </p>
-            <p className="mb-12">
-              His work is characterized by a "Jarvis-standard" for excellence—striving for high-density impact and precision in every deployment. Whether it's architecting scalable chatbot frameworks or engineering ML pipelines, the goal remains the same: transforming raw data into a competitive business advantage.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 gap-10 border-t border-zinc-100 pt-12 mb-20">
-             <div>
-                <h4 className="text-zinc-900 font-black tracking-widest uppercase text-[10px] mb-6">Education</h4>
-                <p className="text-zinc-500 text-sm font-bold mb-2">MISM & BS Information Systems</p>
-                <p className="text-zinc-400 text-xs tracking-wide uppercase">Brigham Young University</p>
-             </div>
-             <div>
-                <h4 className="text-zinc-900 font-black tracking-widest uppercase text-[10px] mb-6">Honors</h4>
-                <p className="text-zinc-500 text-sm font-bold mb-2">Marriott Research Fellow</p>
-                <p className="text-zinc-400 text-xs tracking-wide uppercase">Dean's List (2023-2025)</p>
-             </div>
-          </div>
+      </nav>
 
-          <div className="p-10 bg-zinc-50 rounded-3xl border border-zinc-100 flex flex-col md:flex-row gap-10 items-center">
-             <div className="relative w-48 aspect-video rounded-xl overflow-hidden shrink-0">
-                <Image src="/disc-golf.jpg" alt="Disc Golf" fill className="object-cover" />
-             </div>
-             <div>
-                <h4 className="flex items-center gap-2 text-zinc-900 font-bold mb-3">
-                   <Trophy size={18} />
-                   Identity & Interests
-                </h4>
-                <p className="text-zinc-500 text-sm leading-relaxed">
-                   Outside of AI, I serve as the Secretary for the BYU Disc Golf Team and compete in the DGPT. I'm also a dedicated Formula 1 enthusiast and fluent in Spanish after two years of service in Chile and Alabama.
-                </p>
-             </div>
+      <section className="py-5 my-5">
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-4">
+              <div className="card p-3 shadow-lg">
+                <Image src="/headshot.jpg" alt="Andrew Malone" width={400} height={500} className="img-fluid rounded-2 mb-4" />
+                <div className="px-2">
+                  <h1 className="h3 fw-black mb-1">ANDREW MALONE</h1>
+                  <p className="text-primary-custom fw-bold small mb-4 tracking-widest uppercase">AI Strategy Consultant</p>
+                  
+                  <div className="space-y-3">
+                    <div className="d-flex align-items-center gap-3 text-muted small mb-3">
+                      <MapPin size={16} /> Provo, Utah / Remote
+                    </div>
+                    <div className="d-flex align-items-center gap-3 text-muted small mb-3">
+                      <BookOpen size={16} /> BYU Marriott School
+                    </div>
+                    <div className="d-flex align-items-center gap-3 text-muted small mb-3">
+                      <Globe size={16} /> Spanish Fluency
+                    </div>
+                  </div>
+                  <hr className="my-4" />
+                  <Link href="mailto:mandrew434@gmail.com" className="btn btn-primary-custom w-100 mb-3">GET IN TOUCH</Link>
+                </div>
+              </div>
+            </div>
+            
+            <div className="col-lg-8">
+              <div className="bg-white p-5 rounded-3 shadow-sm">
+                <h2 className="section-title">THE FOUNDER</h2>
+                <div className="fs-5 text-muted leading-relaxed mb-5">
+                  <p className="mb-4">
+                    Andrew Malone is a high-performance Information Systems professional specializing in the intersection of AI, data engineering, and business strategy.
+                  </p>
+                  <p className="mb-4">
+                    Currently pursuing a Master of Information Systems Management (MISM) at Brigham Young University, Andrew has built a career centered on <span className="text-primary-custom fw-bold">measurable impact</span>. His tenure at Pattern saw the identification of over $3.6M in lost revenue opportunities through advanced analytics—a testament to his ability to bridge technical complexity with financial ROI.
+                  </p>
+                  <p>
+                    As a Marriott Research Fellow and AMCIS presenter, Andrew balances academic rigor with rapid, real-world execution. Whether he is architecting enterprise-scale chatbot frameworks or competing on the Disc Golf Pro Tour, he brings a relentless focus on precision and excellence.
+                  </p>
+                </div>
+
+                <div className="row g-4 mt-2">
+                  <div className="col-md-6">
+                    <div className="p-4 bg-light rounded-3 h-100">
+                      <div className="text-primary-custom mb-3"><Award size={32} /></div>
+                      <h4 className="h5 fw-bold mb-3">Education</h4>
+                      <p className="small text-muted mb-0">MISM & BS Information Systems<br /><strong>Brigham Young University</strong></p>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="p-4 bg-light rounded-3 h-100">
+                      <div className="text-primary-custom mb-3"><Trophy size={32} /></div>
+                      <h4 className="h5 fw-bold mb-3">Interests</h4>
+                      <p className="small text-muted mb-0">BYU Disc Golf Team Secretary<br />Formula 1 Enthusiast</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-5 pt-4 border-top">
+                  <h4 className="h6 fw-black tracking-widest uppercase mb-4">Core Competencies</h4>
+                  <div className="d-flex flex-wrap gap-2">
+                    {['Next.js', 'Python', 'SQL', 'Snowflake', 'Streamlit', 'AWS', 'Prompt Engineering', 'ML Pipelines'].map(skill => (
+                      <span key={skill} className="badge bg-light text-dark border px-3 py-2">{skill}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
+      </section>
+
+      <footer className="py-4 bg-white border-top text-center">
+        <p className="text-muted small mb-0">&copy; 2026 Andrew Malone</p>
+      </footer>
+    </div>
   );
 }
