@@ -163,6 +163,17 @@ export default function Home() {
         </div>
       </section>
 
+      {/* LinkedIn Callout */}
+      <section className="py-5 my-5 border-top">
+        <div className="container py-5 text-center">
+           <h2 className="h1 fw-black mb-4 uppercase">STAY IN THE <span className="text-primary-custom italic">LOOP</span></h2>
+           <p className="text-muted mb-5 lead">Join the 1B+ community on LinkedIn where I share regular insights on AI strategy, data engineering, and tech leadership.</p>
+           <a href="https://linkedin.com/in/andrew-r-malone/" target="_blank" className="btn btn-primary-custom btn-lg d-inline-flex align-items-center gap-2">
+             <Linkedin size={20} /> CONNECT ON LINKEDIN
+           </a>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="py-5 bg-dark text-white">
         <div className="container">
