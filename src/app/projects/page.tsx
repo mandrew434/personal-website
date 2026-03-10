@@ -1,33 +1,36 @@
 import Link from 'next/link';
 import ProjectCard from '@/components/ui/ProjectCard';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
     {
       title: "DiscBot AI",
-      category: "B2B SaaS",
-      description: "Designed and launched an AI-powered chatbot for the disc golf industry. Securing enterprise clients like Disc Store and serving 450+ users through specialized product recommendation agents.",
+      category: "B2B SaaS / Venture",
+      description: "Designed and launched an AI-powered chatbot for the disc golf industry. Successfully secured enterprise clients like Disc Store and served 450+ users through specialized product recommendation agents.",
       tags: ["OpenAI", "Prompt Engineering", "Node.js", "n8n"],
-      github: "https://github.com/mandrew434"
+      github: "https://github.com/mandrew434",
+      link: "https://discbot.ai"
+    },
+    {
+      title: "INTEX: Integrated Experience",
+      category: "Full-Stack Development",
+      description: "A high-intensity Junior year capstone. Developed a full-scale web application for a specific business case within a one-week sprint, integrating complex database design with modern frontend architecture.",
+      tags: ["Next.js", "C#", "SQL Server", "Rapid Prototyping"],
+      github: "https://github.com/mandrew434/intex_winter"
+    },
+    {
+      title: "ML Resources Library",
+      category: "Data Science",
+      description: "A curated repository of machine learning resources, featuring specialized implementations in Python and scikit-learn for business analytics and predictive modeling.",
+      tags: ["Python", "scikit-learn", "Data Analytics", "ML"],
+      github: "https://github.com/mandrew434/MLresources"
     },
     {
       title: "Pattern Data Pipeline",
       category: "Data Strategy",
       description: "Architected SQL and Snowflake analytics pipelines to identify $3.67M in reimbursement recovery. Built Streamlit applications to automate legacy reverse-logistics workflows.",
       tags: ["Snowflake", "SQL", "Python", "Streamlit"],
-    },
-    {
-      title: "AI Bio-Sketch Bot",
-      category: "Academic Research",
-      description: "Engineered an AI bio-sketch chatbot for Dr. Twyman at BYU. Focused on enhancing participant connection and engagement in academic research studies.",
-      tags: ["LLMs", "Research", "Python", "Automation"],
-    },
-    {
-      title: "E-commerce AI Framework",
-      category: "Agentic Workflows",
-      description: "Built a scalable framework for deploying support chatbots across 50+ sites. Integrated AI automation into CRM lead-conversion pipelines.",
-      tags: ["CRM Integration", "Scalable AI", "Workflow Design"],
     }
   ];
 
@@ -47,8 +50,11 @@ export default function Projects() {
       <section className="py-5">
         <div className="container py-5">
           <div className="mb-5">
-            <h1 className="display-4 fw-black uppercase mb-3 text-dark">SELECTED <span className="text-primary-custom">PROJECTS</span></h1>
-            <p className="lead text-muted max-w-2xl">A collection of strategic AI deployments and data engineering initiatives focused on measurable business impact.</p>
+            <div className="d-flex align-items-center gap-2 mb-2">
+              <span className="badge bg-primary-custom px-2 py-1 small">PORTFOLIO</span>
+            </div>
+            <h1 className="display-4 fw-black uppercase mb-3 text-dark">SELECTED <span className="text-primary-custom">ENGAGEMENTS</span></h1>
+            <p className="lead text-muted max-w-2xl">From high-intensity BYU INTEX sprints to enterprise data strategy, here is a selection of my technical and strategic work.</p>
           </div>
 
           <div className="row g-4">
@@ -59,11 +65,22 @@ export default function Projects() {
             ))}
           </div>
 
-          <div className="mt-5 pt-5 text-center">
-             <div className="p-5 bg-white rounded-3 shadow-sm border">
-                <h4 className="fw-bold mb-3">Looking for a technical deep-dive?</h4>
-                <p className="text-muted mb-4 italic">"The value of a message is found in its impact, not its length."</p>
-                <a href="https://github.com/mandrew434" target="_blank" className="btn btn-dark btn-lg px-5">EXPLORE GITHUB</a>
+          <div className="mt-5 pt-5">
+             <div className="row g-4">
+                <div className="col-md-8">
+                   <div className="p-5 bg-dark text-white rounded-4 shadow-lg h-100">
+                      <h4 className="fw-black text-primary-custom mb-4 uppercase tracking-widest">Technical Deep-Dive</h4>
+                      <p className="fs-5 opacity-75 mb-4">"The value of a message is found in its impact, not its length."</p>
+                      <p className="text-secondary small mb-5">Explore my full repository of class activities, ML resources, and open-source contributions on GitHub.</p>
+                      <a href="https://github.com/mandrew434" target="_blank" className="btn btn-primary-custom btn-lg px-5">EXPLORE GITHUB <ExternalLink size={18} className="ms-2" /></a>
+                   </div>
+                </div>
+                <div className="col-md-4">
+                   <div className="p-5 bg-white border rounded-4 h-100 flex-column d-flex justify-content-center">
+                      <h5 className="fw-bold mb-3">Venture Focus</h5>
+                      <p className="small text-muted mb-0">Currently exploring the intersection of **Agentic RAG** and **Revenue Operations**.</p>
+                   </div>
+                </div>
              </div>
           </div>
         </div>
