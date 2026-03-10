@@ -1,138 +1,107 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, MoveRight, Layers, BarChart, Zap } from 'lucide-react';
+import { Download, Facebook, Twitter, Linkedin, Github, Instagram } from 'lucide-react';
 
 export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section className="section-padding bg-white overflow-hidden">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="max-w-4xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 mb-8">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-zinc-600">Based in Provo, UT</span>
-              </div>
-              <h1 className="text-5xl md:text-[5.5rem] font-bold tracking-tightest leading-[1] text-zinc-900 mb-10 text-balance">
-                Bridging the gap between <span className="text-zinc-400">complex data</span> and <span className="italic">business strategy.</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-zinc-500 mb-12 max-w-2xl leading-relaxed">
-                Information Systems at BYU. Specializing in AI Strategy and high-impact operational automation for the modern enterprise.
+      <section className="relative h-[70vh] flex flex-col items-center justify-center text-center text-white hero-gradient">
+        <h1 className="text-6xl md:text-8xl font-black tracking-tight mb-4 uppercase">
+          HI! I'M <span className="text-[#00A9D9]">ANDREW MALONE</span>
+        </h1>
+        <p className="text-xl md:text-2xl font-bold tracking-widest uppercase text-zinc-300 mb-12">
+          AI STRATEGIST & IS PROFESSIONAL FROM PROVO, UTAH
+        </p>
+        <button className="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center animate-bounce">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8L10 13L15 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+        </button>
+      </section>
+
+      {/* Main Content */}
+      <section className="py-24 max-w-6xl mx-auto px-6">
+        <div className="grid md:grid-cols-12 gap-20">
+          
+          {/* Left Column: Story */}
+          <div className="md:col-span-4">
+            <h2 className="section-title">MY STORY</h2>
+            <div className="prose prose-zinc prose-lg text-zinc-500 leading-relaxed mb-10">
+              <p>
+                Hello, I'm an AI Strategy Consultant and Information Systems student at BYU. I specialize in bridging the gap between high-level business goals and technical execution.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/projects" className="px-8 py-4 bg-zinc-900 text-white font-semibold rounded-lg hover:bg-zinc-800 transition-all flex items-center gap-2">
-                  View Engagement History <MoveRight size={20} />
-                </Link>
-              </div>
-            </div>
-            <div className="relative aspect-[4/5] w-full max-w-md ml-auto overflow-hidden rounded-2xl border border-zinc-100 shadow-2xl shadow-zinc-200/50">
-              <Image 
-                src="/headshot.jpg" 
-                alt="Andrew Malone" 
-                fill 
-                className="object-cover"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Metrics Section */}
-      <section className="py-20 border-y border-zinc-100 bg-zinc-50/50">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-            <div>
-              <p className="text-4xl font-bold text-zinc-900 mb-2">$3.67M+</p>
-              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Recovery Identified</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-zinc-900 mb-2">50%</p>
-              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Workflow Optimization</p>
-            </div>
-            <div>
-              <p className="text-4xl font-bold text-zinc-900 mb-2">50+</p>
-              <p className="text-sm font-medium text-zinc-500 uppercase tracking-widest">Enterprise Deployments</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Engagement Image */}
-      <section className="py-32">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div className="relative aspect-video rounded-3xl overflow-hidden border border-zinc-100">
-               <Image 
-                src="/pattern.jpg" 
-                alt="Andrew Malone at Pattern" 
-                fill 
-                className="object-cover"
-              />
-            </div>
-            <div>
-              <span className="text-[11px] font-black tracking-[0.3em] uppercase text-zinc-400 mb-6 block">Case Study</span>
-              <h2 className="text-4xl font-bold text-zinc-900 mb-8 tracking-tight">Pattern: AI-Driven Operational Recovery</h2>
-              <p className="text-lg text-zinc-500 leading-relaxed mb-8">
-                As a Reverse Logistics Intern, I engineered SQL and Snowflake analytics pipelines that identified millions in lost reimbursement recovery. By building custom Streamlit tools, we slashed manual workflow time by 50%.
+              <p>
+                With a background in building multimillion-dollar recovery pipelines and architecting enterprise AI frameworks, I help businesses turn data into a competitive advantage.
               </p>
-              <Link href="/projects" className="inline-flex items-center gap-2 font-bold text-zinc-900 border-b border-zinc-900 pb-1 hover:opacity-70 transition-opacity">
-                Explore Technical Details <ArrowRight size={18} />
-              </Link>
+            </div>
+            <Link href="/resume.pdf" className="btn-primary inline-flex items-center gap-2">
+              <Download size={18} /> DOWNLOAD RESUME
+            </Link>
+          </div>
+
+          {/* Center Column: Profile Image */}
+          <div className="md:col-span-4">
+            <div className="relative aspect-square rounded-sm overflow-hidden border-8 border-white shadow-2xl">
+              <Image src="/headshot.jpg" alt="Andrew Malone" fill className="object-cover" />
             </div>
           </div>
+
+          {/* Right Column: Personal Info */}
+          <div className="md:col-span-4">
+            <h2 className="section-title">PERSONAL INFORMATION</h2>
+            <div className="space-y-4 mb-12">
+              <div className="border-b border-zinc-100 pb-3">
+                <span className="info-label">Name</span>
+                <span className="info-value">Andrew Malone</span>
+              </div>
+              <div className="border-b border-zinc-100 pb-3">
+                <span className="info-label">Education</span>
+                <span className="info-value">MISM, BYU</span>
+              </div>
+              <div className="border-b border-zinc-100 pb-3">
+                <span className="info-label">Phone</span>
+                <span className="info-value">(804) 616-0913</span>
+              </div>
+              <div className="border-b border-zinc-100 pb-3">
+                <span className="info-label">Email</span>
+                <span className="info-value">mandrew434@gmail.com</span>
+              </div>
+              <div className="border-b border-zinc-100 pb-3">
+                <span className="info-label">Address</span>
+                <span className="info-value">Provo, Utah</span>
+              </div>
+            </div>
+            
+            <div className="flex gap-4">
+              <Link href="#" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[#00A9D9] hover:border-[#00A9D9] transition-all"><Facebook size={18} /></Link>
+              <Link href="#" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[#00A9D9] hover:border-[#00A9D9] transition-all"><Twitter size={18} /></Link>
+              <Link href="https://linkedin.com/in/andrew-r-malone/" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[#00A9D9] hover:border-[#00A9D9] transition-all"><Linkedin size={18} /></Link>
+              <Link href="https://github.com/mandrew434" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[#00A9D9] hover:border-[#00A9D9] transition-all"><Github size={18} /></Link>
+              <Link href="#" className="w-10 h-10 rounded-full border border-zinc-200 flex items-center justify-center text-zinc-400 hover:text-[#00A9D9] hover:border-[#00A9D9] transition-all"><Instagram size={18} /></Link>
+            </div>
+          </div>
+
         </div>
       </section>
 
-      {/* Philosophy */}
-      <section className="section-padding border-t border-zinc-100 bg-zinc-50/30">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-24 items-start">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-tight">
-              A commitment to <br />applied intelligence.
-            </h2>
-            <div className="space-y-12">
-              <div className="flex gap-6">
-                <div className="w-12 h-12 rounded-xl bg-white border border-zinc-100 shadow-sm flex items-center justify-center shrink-0">
-                  <Layers className="text-zinc-900" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-3 text-zinc-900">Architectural Thinking</h4>
-                  <p className="text-zinc-500 leading-relaxed">Designing end-to-end AI frameworks that integrate seamlessly into complex corporate ecosystems, not just standalone tools.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-12 h-12 rounded-xl bg-white border border-zinc-100 shadow-sm flex items-center justify-center shrink-0">
-                  <BarChart className="text-zinc-900" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-3 text-zinc-900">Analytical Rigor</h4>
-                  <p className="text-zinc-500 leading-relaxed">Deep-dive technical audits across SQL, Snowflake, and Python to identify latent operational value.</p>
-                </div>
-              </div>
-              <div className="flex gap-6">
-                <div className="w-12 h-12 rounded-xl bg-white border border-zinc-100 shadow-sm flex items-center justify-center shrink-0">
-                  <Zap className="text-zinc-900" size={24} />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold mb-3 text-zinc-900">Rapid Execution</h4>
-                  <p className="text-zinc-500 leading-relaxed">Deploying optimized, production-ready solutions that deliver measurable ROI within weeks, not months.</p>
-                </div>
-              </div>
-            </div>
+      {/* Stats Counter Section */}
+      <section className="bg-zinc-50 py-20 border-y border-zinc-100">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+          <div>
+            <p className="text-5xl font-black text-zinc-900 mb-2">$3.6M</p>
+            <p className="text-xs font-bold text-[#00A9D9] uppercase tracking-widest">Recovery Found</p>
           </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="section-padding bg-zinc-900 text-white text-center">
-        <div className="max-w-screen-xl mx-auto px-6">
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 text-balance leading-tight">
-            Ready to integrate intelligence <br className="hidden md:block" /> into your business strategy?
-          </h2>
-          <Link href="mailto:mandrew434@gmail.com" className="inline-flex items-center gap-2 text-lg font-semibold border-b-2 border-white pb-1 hover:opacity-70 transition-opacity">
-            Start a Conversation <ArrowRight size={20} />
-          </Link>
+          <div>
+            <p className="text-5xl font-black text-zinc-900 mb-2">50%</p>
+            <p className="text-xs font-bold text-[#00A9D9] uppercase tracking-widest">Time Saved</p>
+          </div>
+          <div>
+            <p className="text-5xl font-black text-zinc-900 mb-2">50+</p>
+            <p className="text-xs font-bold text-[#00A9D9] uppercase tracking-widest">AI Deployments</p>
+          </div>
+          <div>
+            <p className="text-5xl font-black text-zinc-900 mb-2">3.95</p>
+            <p className="text-xs font-bold text-[#00A9D9] uppercase tracking-widest">Academic GPA</p>
+          </div>
         </div>
       </section>
     </main>

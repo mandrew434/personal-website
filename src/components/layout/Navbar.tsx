@@ -2,19 +2,20 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="glass-nav">
-      <div className="max-w-screen-xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link href="/" className="text-lg font-bold tracking-tight text-zinc-900">
-          Andrew Malone<span className="text-zinc-400">/</span>
+    <nav className="fixed top-0 w-full z-50 bg-white border-b border-zinc-100 h-20 flex items-center">
+      <div className="max-w-6xl mx-auto px-6 w-full flex justify-between items-center">
+        <Link href="/" className="text-2xl font-black text-zinc-900 tracking-tighter">
+          ANDREW <span className="text-[#00A9D9]">MALONE</span>
         </Link>
-        <div className="hidden md:flex gap-8 text-[13px] font-medium text-zinc-500">
-          <Link href="/about" className="hover:text-zinc-900 transition-colors">About</Link>
-          <Link href="/projects" className="hover:text-zinc-900 transition-colors">Projects</Link>
-          <Link href="/services" className="hover:text-zinc-900 transition-colors">Consulting</Link>
+        <div className="hidden md:flex gap-10 items-center">
+          <Link href="/" className="nav-link text-zinc-900">Home</Link>
+          <Link href="/about" className="nav-link text-zinc-400">About</Link>
+          <Link href="/projects" className="nav-link text-zinc-400">Projects</Link>
+          <button className="w-10 h-10 rounded-full bg-zinc-100 flex items-center justify-center text-zinc-400">
+             <span className="sr-only">Menu</span>
+             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 10H17M3 5H17M3 15H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+          </button>
         </div>
-        <Link href="mailto:mandrew434@gmail.com" className="text-[13px] font-semibold text-zinc-900 hover:opacity-70 transition-opacity">
-          Connect →
-        </Link>
       </div>
     </nav>
   );

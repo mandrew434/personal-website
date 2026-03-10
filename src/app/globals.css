@@ -4,56 +4,48 @@
 
 @layer base {
   :root {
+    --primary: 199 89% 48%; /* #00A9D9 - Bright Blue from example */
+    --primary-foreground: 0 0% 100%;
     --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
-    --radius: 0.5rem;
+    --foreground: 222 47% 11%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --border: 214.3 31.8% 91.4%;
   }
 }
 
 body {
   background-color: white;
-  color: #18181b;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  color: #333;
 }
 
-.glass-nav {
-  background-color: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(228, 228, 231, 0.5);
-  position: sticky;
-  top: 0;
-  z-index: 50;
+.hero-gradient {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/pattern.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
-.section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+.btn-primary {
+  @apply bg-[#00A9D9] text-white px-6 py-3 font-bold uppercase tracking-wider rounded-sm hover:bg-[#008db6] transition-colors;
 }
 
-@media (min-width: 768px) {
-  .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
+.section-title {
+  @apply text-[#00A9D9] font-black uppercase tracking-widest text-xl mb-8 flex items-center gap-4;
 }
 
-.text-balance {
-  text-wrap: balance;
+.section-title::after {
+  content: "";
+  @apply h-[2px] flex-1 bg-zinc-100;
+}
+
+.info-label {
+  @apply font-bold text-zinc-900 w-32 inline-block;
+}
+
+.info-value {
+  @apply text-zinc-500;
+}
+
+.nav-link {
+  @apply font-bold uppercase tracking-widest text-xs hover:text-[#00A9D9] transition-colors;
 }
