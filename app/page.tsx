@@ -1,10 +1,10 @@
 import SectionHeader from "@/components/SectionHeader";
-import { Github, Linkedin, Mail, Trophy, Cpu, Database, Layout } from "lucide-react";
+import ProjectCard from "@/components/ProjectCard";
+import { Github, Linkedin, Mail, Trophy, Cpu, Database, Layout, ArrowRight } from "lucide-react";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-zinc-300 font-sans selection:bg-white selection:text-black">
-      {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/50 backdrop-blur-md border-b border-zinc-900">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-bold tracking-tighter text-white text-xl">AM.</span>
@@ -17,99 +17,128 @@ export default function Home() {
       </nav>
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-24">
-        {/* Hero Section */}
-        <section className="mb-32">
-          <h1 className="text-7xl md:text-8xl font-bold tracking-tighter text-white mb-6">
+        <section className="mb-40">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-zinc-800 mb-8 bg-zinc-950">
+            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[10px] font-bold tracking-widest uppercase text-zinc-400">Available for AI Consulting</span>
+          </div>
+          <h1 className="text-7xl md:text-9xl font-bold tracking-tighter text-white mb-8">
             ANDREW<br />MALONE
           </h1>
-          <p className="max-w-2xl text-xl md:text-2xl text-zinc-400 mb-8 leading-relaxed">
+          <p className="max-w-2xl text-xl md:text-3xl text-zinc-400 mb-12 leading-tight">
             Information Systems at BYU. 
             <span className="text-white"> AI Strategy Consultant </span> 
-            transforming complex data into operational advantages.
+            specializing in high-impact agentic workflows.
           </p>
-          <div className="flex gap-6">
-            <a href="https://linkedin.com/in/andrew-r-malone/" target="_blank" className="hover:text-white transition-colors"><Linkedin size={24} /></a>
-            <a href="https://github.com/mandrew434" target="_blank" className="hover:text-white transition-colors"><Github size={24} /></a>
-            <a href="mailto:mandrew434@gmail.com" className="hover:text-white transition-colors"><Mail size={24} /></a>
+          <div className="flex gap-8 items-center">
+            <div className="flex gap-6">
+              <a href="https://linkedin.com/in/andrew-r-malone/" target="_blank" className="text-zinc-500 hover:text-white transition-colors"><Linkedin size={28} /></a>
+              <a href="https://github.com/mandrew434" target="_blank" className="text-zinc-500 hover:text-white transition-white transition-colors"><Github size={28} /></a>
+              <a href="mailto:mandrew434@gmail.com" className="text-zinc-500 hover:text-white transition-colors"><Mail size={28} /></a>
+            </div>
+            <div className="h-px w-12 bg-zinc-800" />
+            <a href="#projects" className="group flex items-center gap-2 text-sm font-bold tracking-widest uppercase text-white">
+              View Work <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
         </section>
 
-        {/* Experience Section */}
-        <section id="experience" className="mb-32">
+        <section id="experience" className="mb-40">
           <SectionHeader title="Experience" />
-          <div className="space-y-12">
-            <div>
-              <div className="flex justify-between items-baseline mb-2">
-                <h3 className="text-xl font-bold text-white">Reverse Logistics Intern (AI & Strategy)</h3>
-                <span className="text-sm text-zinc-500">2025</span>
+          <div className="space-y-20">
+            <div className="relative pl-8 border-l border-zinc-900">
+              <div className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-white" />
+              <div className="flex justify-between items-baseline mb-4">
+                <h3 className="text-2xl font-bold text-white tracking-tight">Reverse Logistics Strategy (AI)</h3>
+                <span className="text-xs font-bold tracking-widest uppercase text-zinc-600">2025 • Pattern</span>
               </div>
-              <p className="text-zinc-400 mb-4 italic">Pattern</p>
-              <ul className="list-disc list-inside space-y-2 text-zinc-400 marker:text-zinc-600">
-                <li>Identified <span className="text-white">$3.67M reimbursement recovery</span> through SQL/Snowflake pipelines.</li>
-                <li>Built 6 Streamlit automation tools, reducing workflow time by 50%.</li>
-                <li>Led weekly AI workshops on applied automation strategies.</li>
+              <ul className="space-y-4 text-lg text-zinc-400 leading-relaxed">
+                <li>• Engineered SQL/Snowflake pipelines identifying <span className="text-white">$3.67M in recovery opportunities</span>.</li>
+                <li>• Optimized operations by 50% via custom Streamlit agentic applications.</li>
+                <li>• Spearheaded internal AI education to translate emerging tech into applied strategy.</li>
               </ul>
             </div>
 
-            <div>
-              <div className="flex justify-between items-baseline mb-2">
-                <h3 className="text-xl font-bold text-white">AI Integration Lead</h3>
-                <span className="text-sm text-zinc-500">2024 - 2025</span>
+            <div className="relative pl-8 border-l border-zinc-900">
+              <div className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-zinc-800" />
+              <div className="flex justify-between items-baseline mb-4">
+                <h3 className="text-2xl font-bold text-white tracking-tight">AI Integration Lead</h3>
+                <span className="text-xs font-bold tracking-widest uppercase text-zinc-600">2024 • Extra Mile</span>
               </div>
-              <p className="text-zinc-400 mb-4 italic">Extra Mile E-commerce</p>
-              <ul className="list-disc list-inside space-y-2 text-zinc-400 marker:text-zinc-600">
-                <li>Architected scalable AI chatbot frameworks for 50+ sites.</li>
-                <li>Integrated LLM workflows into existing CRM ecosystems.</li>
+              <ul className="space-y-4 text-lg text-zinc-400 leading-relaxed">
+                <li>• Architected and piloted scalable AI chatbot frameworks for 50+ enterprise sites.</li>
+                <li>• Integrated LLM automation into CRM systems to drive marketing efficiency.</li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Skills Section */}
-        <section id="skills" className="mb-32">
-          <SectionHeader title="Tech Stack" />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-6 rounded-2xl bg-zinc-950 border border-zinc-900">
-              <Cpu className="mb-4 text-white" />
-              <h4 className="text-white font-bold mb-2">AI & Automation</h4>
-              <p className="text-sm text-zinc-500">Prompt Engineering, n8n, GitHub Copilot, ML Experimentation.</p>
+        <section id="projects" className="mb-40">
+          <SectionHeader title="Selected Projects" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ProjectCard 
+              title="DiscBot AI"
+              description="A B2B AI-powered chatbot designed for the disc golf industry. Successfully secured enterprise clients and assisted 450+ users in specialized product selection through iterative prompt engineering."
+              tags={["OpenAI", "Prompt Engineering", "B2B SaaS"]}
+            />
+            <ProjectCard 
+              title="AI Research Assistant"
+              description="Developed AI bio-sketch chatbots and automated statistical pipelines for Dr. Twyman at BYU. Coauthored research presented at AMCIS for academic audiences."
+              tags={["Python", "Automation", "Research"]}
+            />
+          </div>
+        </section>
+
+        <section id="skills" className="mb-40">
+          <SectionHeader title="Expertise" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div>
+              <Cpu className="mb-6 text-white" size={32} />
+              <h4 className="text-xl font-bold text-white mb-4">AI Strategy</h4>
+              <p className="text-zinc-500 leading-relaxed italic">High-impact automation, prompt optimization, and agentic framework design.</p>
             </div>
-            <div className="p-6 rounded-2xl bg-zinc-950 border border-zinc-900">
-              <Database className="mb-4 text-white" />
-              <h4 className="text-white font-bold mb-2">Data & Analytics</h4>
-              <p className="text-sm text-zinc-500">Python (Pandas, scikit-learn), SQL (Postgres, Snowflake), Streamlit, Tableau.</p>
+            <div>
+              <Database className="mb-6 text-white" size={32} />
+              <h4 className="text-xl font-bold text-white mb-4">Analytics</h4>
+              <p className="text-zinc-500 leading-relaxed italic">Snowflake, SQL, and Python-driven insights that drive multimillion-dollar recovery.</p>
             </div>
-            <div className="p-6 rounded-2xl bg-zinc-950 border border-zinc-900">
-              <Layout className="mb-4 text-white" />
-              <h4 className="text-white font-bold mb-2">Development</h4>
-              <p className="text-sm text-zinc-500">Next.js, React, Node.js, C#, Git/GitHub.</p>
+            <div>
+              <Layout className="mb-6 text-white" size={32} />
+              <h4 className="text-xl font-bold text-white mb-4">Engineering</h4>
+              <p className="text-zinc-500 leading-relaxed italic">Next.js, React, and Node.js for modern, performant digital experiences.</p>
             </div>
           </div>
         </section>
 
-        {/* Hobbies / Interests */}
-        <section className="mb-32">
-          <SectionHeader title="Beyond the Code" />
+        <section className="mb-40">
+          <SectionHeader title="Identity" />
           <div className="flex flex-wrap gap-4">
-            <div className="px-6 py-4 rounded-full border border-zinc-800 flex items-center gap-3">
-              <Trophy size={18} className="text-zinc-400" />
-              <span className="text-white font-medium text-sm">Disc Golf Pro Tour (DGPT)</span>
+            <div className="px-8 py-4 rounded-full border border-zinc-900 bg-zinc-950 flex items-center gap-3">
+              <Trophy size={20} className="text-zinc-500" />
+              <span className="text-white font-bold text-xs uppercase tracking-widest">DGPT Secretary</span>
             </div>
-            <div className="px-6 py-4 rounded-full border border-zinc-800 flex items-center gap-3">
-              <Cpu size={18} className="text-zinc-400" />
-              <span className="text-white font-medium text-sm">Formula 1 Enthusiast</span>
+            <div className="px-8 py-4 rounded-full border border-zinc-900 bg-zinc-950 flex items-center gap-3">
+              <Cpu size={20} className="text-zinc-500" />
+              <span className="text-white font-bold text-xs uppercase tracking-widest">F1 Enthusiast</span>
             </div>
-            <div className="px-6 py-4 rounded-full border border-zinc-800 flex items-center gap-3">
-              <span className="text-white font-medium text-sm">Spanish Fluency (Chile/Alabama)</span>
+            <div className="px-8 py-4 rounded-full border border-zinc-900 bg-zinc-950">
+              <span className="text-white font-bold text-xs uppercase tracking-widest">Spanish Fluency</span>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-zinc-900 py-12">
-        <div className="max-w-5xl mx-auto px-6 text-sm text-zinc-600 flex justify-between">
-          <span>&copy; 2026 Andrew Malone</span>
-          <span>Built with Next.js + OpenClaw</span>
+      <footer className="border-t border-zinc-900 py-20 bg-zinc-950/50">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="text-center md:text-left">
+            <h5 className="text-white font-bold mb-2 uppercase tracking-widest text-xs">Let's Connect</h5>
+            <p className="text-zinc-500 text-sm">Open for strategic AI opportunities.</p>
+          </div>
+          <div className="flex gap-8 text-[10px] font-bold tracking-widest uppercase text-zinc-600">
+            <span>&copy; 2026 Andrew Malone</span>
+            <a href="https://github.com/mandrew434" className="hover:text-white transition-colors">Github</a>
+            <a href="https://linkedin.com/in/andrew-r-malone/" className="hover:text-white transition-colors">Linkedin</a>
+          </div>
         </div>
       </footer>
     </div>
