@@ -13,6 +13,7 @@ export default function Navbar() {
             <li className="nav-item"><Link href="/about" className="nav-link">ABOUT</Link></li>
             <li className="nav-item"><Link href="/projects" className="nav-link">PROJECTS</Link></li>
             <li className="nav-item"><Link href="/identity" className="nav-link">IDENTITY</Link></li>
+            <li className="nav-item"><Link href="/consulting" className="nav-link">CONSULTING</Link></li>
             <li className="nav-item">
               <Link href="mailto:mandrew434@gmail.com" className="btn btn-primary-custom ms-lg-2">HIRE ME</Link>
             </li>
