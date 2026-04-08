@@ -1,29 +1,46 @@
 import Link from 'next/link';
 import { 
-  MessageSquare, 
   Settings, 
-  FileText, 
   ArrowRight, 
   Mail, 
   CheckCircle2, 
-  Disc
+  Disc,
+  LineChart,
+  Bot,
+  Search,
+  Zap,
+  Linkedin
 } from 'lucide-react';
 
 export default function Consulting() {
   const experiences = [
     {
+      title: "Reverse Logistics & Data Strategy",
+      client: "Pattern (Lehi, UT)",
+      description: "Identified $3.67M reimbursement recovery opportunity by engineering SQL, Snowflake, and Python analytics pipelines. Built 6 Streamlit automation tools, reducing workflow time by 50%.",
+      tags: ["Snowflake", "SQL", "Python", "Streamlit", "ML Pipelines"],
+      icon: <LineChart className="text-primary-custom" size={32} />
+    },
+    {
       title: "DiscBot AI",
-      client: "Disc Store / Disc Golf Industry",
-      description: "Automated customer support and product recommendations for a global leader in disc golf. Built agentic workflows that live inside CRM environments.",
-      tags: ["Agentic AI", "eCommerce", "Product Discovery"],
+      client: "Founder / Disc Store",
+      description: "Designed and launched a B2B AI-powered chatbot for product selection. Secured Disc Store as the first enterprise client and served 450+ users with iterative prompt engineering.",
+      tags: ["Prompt Engineering", "B2B SaaS", "n8n", "Node.js"],
       icon: <Disc className="text-primary-custom" size={32} />
     },
     {
-      title: "Revenue Ops Strategy",
-      client: "B2B SaaS",
-      description: "Identifying and recovering millions in latent profit through data-driven SQL audits and intelligent automation.",
-      tags: ["Data Audits", "SQL", "Snowflake"],
-      icon: <Settings className="text-primary-custom" size={32} />
+      title: "AI Integration & CRM Automation",
+      client: "Extra Mile E-commerce",
+      description: "Architected a scalable AI chatbot framework for 50+ sites and integrated AI workflows into existing CRM systems to optimize lead conversion.",
+      tags: ["CRM Integration", "Scalable Architecture", "Automation"],
+      icon: <Bot className="text-primary-custom" size={32} />
+    },
+    {
+      title: "Research: AI & Data Automation",
+      client: "Dr. Twyman (BYU IS Department)",
+      description: "Automated data cleanup pipelines for 100+ study participants and engineered an AI bio-sketch chatbot for academic research engagement.",
+      tags: ["Data Pipelines", "Academic Research", "Python"],
+      icon: <Search className="text-primary-custom" size={32} />
     }
   ];
 
@@ -33,9 +50,11 @@ export default function Consulting() {
         <div className="container py-5">
           <div className="row g-5 align-items-center mb-5">
             <div className="col-lg-7">
-              <span className="badge badge-custom px-3 py-2 mb-3">AI & STRATEGY CONSULTING</span>
-              <h1 className="display-3 fw-black text-white mb-4">ENGINEERING <span className="text-primary-custom">LEVERAGE</span>.</h1>
-              <p className="lead text-muted mb-0">I help businesses bridge the gap between AI hype and technical execution. Whether it's data auditing or deploying agentic workflows, I build systems that move the needle.</p>
+              <div className="d-inline-flex align-items-center gap-2 badge badge-custom px-3 py-2 mb-3">
+                <Zap size={14} /> AI & STRATEGY CONSULTING
+              </div>
+              <h1 className="display-3 fw-black text-white mb-4">ENGINEERING <span className="text-primary-custom italic">LEVERAGE</span>.</h1>
+              <p className="lead text-muted mb-0">Transforming AI and analytics into operational improvements. Whether it's $3.67M in identified recovery or 50% efficiency gains, I build technical solutions that drive business outcomes.</p>
             </div>
           </div>
 
@@ -45,7 +64,7 @@ export default function Consulting() {
                 <div className="card h-100 p-5 border-secondary bg-card-custom hover-lift">
                   <div className="mb-4">{exp.icon}</div>
                   <h3 className="h4 fw-bold text-white mb-2">{exp.title}</h3>
-                  <p className="text-primary-custom small fw-bold mb-3 uppercase tracking-tighter">{exp.client}</p>
+                  <p className="text-primary-custom small fw-bold mb-3 uppercase tracking-wider">{exp.client}</p>
                   <p className="text-muted mb-4">{exp.description}</p>
                   <div className="d-flex flex-wrap gap-2 mt-auto">
                     {exp.tags.map(tag => (
@@ -59,35 +78,35 @@ export default function Consulting() {
 
           <div className="row g-5">
             <div className="col-lg-6">
-              <div className="p-5 bg-card-custom rounded-4 border border-secondary">
-                <h2 className="h3 fw-black text-white mb-4">GET <span className="text-primary-custom">HELP</span></h2>
-                <p className="text-muted mb-5">Fill out the form below to discuss your project or technical needs. I specialize in identifying data-driven recovery and deploying agentic workflows.</p>
+              <div className="p-5 bg-card-custom rounded-4 border border-secondary h-100">
+                <h2 className="h3 fw-black text-white mb-4 uppercase">GET <span className="text-primary-custom">TECHNICAL HELP</span></h2>
+                <p className="text-muted mb-5">Discuss your AI strategy, data auditing, or workflow automation needs. I specialize in identifying latent profit and deploying agentic systems.</p>
                 
                 <form className="row g-4">
                   <div className="col-12">
-                    <label className="form-label text-white small fw-bold">NAME</label>
+                    <label className="form-label text-white small fw-bold tracking-widest">NAME</label>
                     <input type="text" className="form-control bg-dark border-secondary text-white py-3" placeholder="Your name" />
                   </div>
                   <div className="col-12">
-                    <label className="form-label text-white small fw-bold">EMAIL</label>
+                    <label className="form-label text-white small fw-bold tracking-widest">EMAIL</label>
                     <input type="email" className="form-control bg-dark border-secondary text-white py-3" placeholder="you@example.com" />
                   </div>
                   <div className="col-12">
-                    <label className="form-label text-white small fw-bold">NATURE OF REQUEST</label>
+                    <label className="form-label text-white small fw-bold tracking-widest">NATURE OF REQUEST</label>
                     <select className="form-select bg-dark border-secondary text-white py-3">
-                      <option>Technical Audit / Data Strategy</option>
                       <option>AI / Agentic Workflow Deployment</option>
-                      <option>Custom Development</option>
+                      <option>Data Strategy / SQL & Snowflake Audits</option>
+                      <option>Technical Product Strategy</option>
                       <option>Other</option>
                     </select>
                   </div>
                   <div className="col-12">
-                    <label className="form-label text-white small fw-bold">MESSAGE</label>
+                    <label className="form-label text-white small fw-bold tracking-widest">MESSAGE</label>
                     <textarea className="form-control bg-dark border-secondary text-white py-3" rows={4} placeholder="How can I help you?"></textarea>
                   </div>
                   <div className="col-12">
                     <button type="submit" className="btn btn-primary-custom btn-lg w-100 py-3 d-flex align-items-center justify-content-center gap-2">
-                      SEND REQUEST <ArrowRight size={18} />
+                      SUBMIT INQUIRY <ArrowRight size={18} />
                     </button>
                   </div>
                 </form>
@@ -98,40 +117,49 @@ export default function Consulting() {
               <div className="h-100 d-flex flex-column gap-4">
                 <div className="p-5 bg-dark border border-secondary rounded-4">
                   <h4 className="fw-bold text-white mb-4">Direct Contact</h4>
-                  <div className="d-flex align-items-center gap-3 mb-3">
+                  <div className="d-flex align-items-center gap-3 mb-4">
                     <div className="p-2 bg-card-custom rounded-3 text-primary-custom">
                       <Mail size={20} />
                     </div>
                     <div>
-                      <p className="small text-muted mb-0">Email</p>
-                      <a href="mailto:mandrew434@gmail.com" className="text-white text-decoration-none">mandrew434@gmail.com</a>
+                      <p className="small text-muted mb-0">Professional Email</p>
+                      <a href="mailto:mandrew434@gmail.com" className="text-white text-decoration-none fw-bold">mandrew434@gmail.com</a>
                     </div>
                   </div>
                   <div className="d-flex align-items-center gap-3">
                     <div className="p-2 bg-card-custom rounded-3 text-primary-custom">
-                      <MessageSquare size={20} />
+                      <Linkedin size={20} />
                     </div>
                     <div>
-                      <p className="small text-muted mb-0">LinkedIn</p>
-                      <a href="https://linkedin.com/in/andrew-r-malone/" target="_blank" className="text-white text-decoration-none">andrew-r-malone</a>
+                      <p className="small text-muted mb-0">LinkedIn Profile</p>
+                      <a href="https://linkedin.com/in/andrew-r-malone/" target="_blank" className="text-white text-decoration-none fw-bold">andrew-r-malone</a>
                     </div>
                   </div>
                 </div>
 
                 <div className="p-5 bg-primary-custom text-white rounded-4 flex-grow-1 d-flex flex-column justify-content-center">
-                  <h4 className="fw-black mb-3">CONSULTING TRACK RECORD</h4>
+                  <h4 className="fw-black mb-4 uppercase tracking-tighter">CONSULTING TRACK RECORD</h4>
                   <ul className="list-unstyled mb-0">
-                    <li className="d-flex align-items-center gap-2 mb-3">
-                      <CheckCircle2 size={18} />
-                      <span>$3.6M+ recovery identified via SQL audits</span>
+                    <li className="d-flex align-items-start gap-3 mb-4">
+                      <CheckCircle2 size={24} className="flex-shrink-0" />
+                      <div>
+                        <p className="fw-bold mb-0">$3.67M Identified Recovery</p>
+                        <p className="small opacity-75">SQL & Snowflake pipelines at Pattern</p>
+                      </div>
                     </li>
-                    <li className="d-flex align-items-center gap-2 mb-3">
-                      <CheckCircle2 size={18} />
-                      <span>450+ users served via specialized agents</span>
+                    <li className="d-flex align-items-start gap-3 mb-4">
+                      <CheckCircle2 size={24} className="flex-shrink-0" />
+                      <div>
+                        <p className="fw-bold mb-0">50% Workflow Efficiency Gain</p>
+                        <p className="small opacity-75">Streamlit & n8n automation deployments</p>
+                      </div>
                     </li>
-                    <li className="d-flex align-items-center gap-2">
-                      <CheckCircle2 size={18} />
-                      <span>Production-grade AI deployed in weeks</span>
+                    <li className="d-flex align-items-start gap-3">
+                      <CheckCircle2 size={24} className="flex-shrink-0" />
+                      <div>
+                        <p className="fw-bold mb-0">Enterprise AI Scalability</p>
+                        <p className="small opacity-75">Architected frameworks for 50+ sites</p>
+                      </div>
                     </li>
                   </ul>
                 </div>
